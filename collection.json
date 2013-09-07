@@ -1,0 +1,37 @@
+{
+    "copy.js": [
+        "components/jquery/*.js",
+        "components/html5shiv/dist/*.js",
+        "components/respond/respond.min.js"
+    ],
+    "copy.fonts": [
+        "components/bootstrap/fonts/*"
+    ],
+    "bootstrap.js": [
+        "components/bootstrap/js/transition.js",
+        "components/bootstrap/js/alert.js",
+        "components/bootstrap/js/button.js",
+        "components/bootstrap/js/carousel.js",
+        "components/bootstrap/js/collapse.js",
+        "components/bootstrap/js/dropdown.js",
+        "components/bootstrap/js/modal.js",
+        "components/bootstrap/js/tooltip.js",
+        "components/bootstrap/js/popover.js",
+        "components/bootstrap/js/scrollspy.js",
+        "components/bootstrap/js/tab.js",
+        "components/bootstrap/js/affix.js"
+    ],
+    "bootstrap.css": [
+        "src/pyramid_sphinx_themes/pyramid/less/bootstrap.less"
+    ],
+    "theme.css": [
+        "src/pyramid_sphinx_themes/pyramid/less/theme.less"
+    ],
+    "theme.js": [
+        "src/pyramid_sphinx_themes/pyramid/static/js/theme.js"
+    ],
+    "all.css": [
+        "src/pyramid_sphinx_themes/pyramid/static/dist/css/bootstrap.css",
+        "src/pyramid_sphinx_themes/pyramid/static/dist/css/theme.css"
+    ]
+}

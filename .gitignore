@@ -1,0 +1,31 @@
+# standard
+*~
+*.pyc
+*.pyo
+*.swo
+*.swp
+*.mo
+*.egg-info
+/.coverage
+/.tests
+/.Python
+/PYSMELLTAGS*
+
+# buildout
+/.installed.cfg
+/.mr.developer.cfg
+/bin
+/develop-eggs
+/eggs
+/include
+/lib
+/parts
+
+# local
+/docs/_build
+/components
+/node_modules/
+/npm-debug.log
+
+# Mac
+.DS_Store

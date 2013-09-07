@@ -1,4 +1,4 @@
-pyramid-sphinx-theme
-====================
+pyramid-sphinx-themes
+=====================
 
-Sphinx theme for Pyramid and related projects
+Sphinx themes for Pyramid and related projects

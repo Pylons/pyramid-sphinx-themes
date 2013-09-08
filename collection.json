@@ -2,7 +2,10 @@
     "copy.js": [
         "components/jquery/*.js",
         "components/html5shiv/dist/*.js",
-        "components/respond/respond.min.js"
+        "components/respond/respond.min.js",
+        "components/underscore/*.js",
+        "src/pyramid_sphinx_themes/pyramid/static/js/doctools.js",
+        "src/pyramid_sphinx_themes/pyramid/static/js/websupport.js"
     ],
     "copy.fonts": [
         "components/bootstrap/fonts/*"
@@ -29,6 +32,10 @@
     ],
     "theme.js": [
         "src/pyramid_sphinx_themes/pyramid/static/js/theme.js"
+    ],
+    "sphinx.js": [
+        "src/pyramid_sphinx_themes/pyramid/static/js/doctools.js",
+        "src/pyramid_sphinx_themes/pyramid/static/js/websupport.js"
     ],
     "all.css": [
         "src/pyramid_sphinx_themes/pyramid/static/dist/css/bootstrap.css",

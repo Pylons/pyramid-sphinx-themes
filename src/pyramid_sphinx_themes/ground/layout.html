@@ -200,7 +200,9 @@
     </div>
 {%- endblock %}
 
+{%- if not embedded %}
     {{ script() }}
+{%- endif %}
 
   </body>
 </html>

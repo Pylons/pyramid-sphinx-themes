@@ -107,7 +107,7 @@ module.exports = function (grunt) {
         },
         watch: {
             less: {
-                files: ['src/pyramid_sphinx_themes/ground/static/less/*.less'],
+                files: ['src/pyramid_sphinx_themes/ground/less/*.less'],
                 tasks: ['less:default'],
                 options: { livereload: true }
             },

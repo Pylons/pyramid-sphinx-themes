@@ -42,8 +42,8 @@ module.exports = function (grunt) {
         copy: {
             'default': {
                 files: flattenCopy({
-                    'src/pyramid_sphinx_themes/pyramid/static/dist/js/': collect.select('copy.js'),
-                    'src/pyramid_sphinx_themes/pyramid/static/dist/fonts/': collect.select('copy.fonts')
+                    'src/pyramid_sphinx_themes/ground/static/dist/js/': collect.select('copy.js'),
+                    'src/pyramid_sphinx_themes/ground/static/dist/fonts/': collect.select('copy.fonts')
                 })
             }
         },
@@ -53,21 +53,21 @@ module.exports = function (grunt) {
             },
             bootstrap: {
                 src: collect.select('bootstrap.js'),
-                dest: 'src/pyramid_sphinx_themes/pyramid/static/dist/js/bootstrap.js'
+                dest: 'src/pyramid_sphinx_themes/ground/static/dist/js/bootstrap.js'
             },
             css: {
                 files: [
                     {
                         src: collect.select('all.css'),
-                        dest: 'src/pyramid_sphinx_themes/pyramid/static/dist/css/all.css'
+                        dest: 'src/pyramid_sphinx_themes/ground/static/dist/css/all.css'
                     }
                 ]
             },
             js: {
                 files: [
                     {
-                        src: collect.select('theme.js'),
-                        dest: 'src/pyramid_sphinx_themes/pyramid/static/dist/js/theme.js'
+                        src: collect.select('ground.js'),
+                        dest: 'src/pyramid_sphinx_themes/ground/static/dist/js/ground.js'
                     }
                 ]
             }
@@ -75,7 +75,7 @@ module.exports = function (grunt) {
         cssmin: {
             dist: {
                 src: collect.select('all.css'),
-                dest: 'src/pyramid_sphinx_themes/pyramid/static/dist/css/all.min.css'
+                dest: 'src/pyramid_sphinx_themes/ground/static/dist/css/all.min.css'
             }
         },
         uglify: {
@@ -84,11 +84,11 @@ module.exports = function (grunt) {
             },
             bootstrap: {
                 src: collect.select('bootstrap.js'),
-                dest: 'src/pyramid_sphinx_themes/pyramid/static/dist/js/bootstrap.min.js'
+                dest: 'src/pyramid_sphinx_themes/ground/static/dist/js/bootstrap.min.js'
             },
             dist: {
-                src: collect.select('theme.js'),
-                dest: 'src/pyramid_sphinx_themes/pyramid/static/dist/js/theme.min.js'
+                src: collect.select('ground.js'),
+                dest: 'src/pyramid_sphinx_themes/ground/static/dist/js/ground.min.js'
             }
         },
         less: {
@@ -96,25 +96,25 @@ module.exports = function (grunt) {
                 files: [
                     {
                         src: collect.select('bootstrap.css'),
-                        dest: 'src/pyramid_sphinx_themes/pyramid/static/dist/css/bootstrap.css'
+                        dest: 'src/pyramid_sphinx_themes/ground/static/dist/css/bootstrap.css'
                     },
                     {
-                        src: collect.select('theme.css'),
-                        dest: 'src/pyramid_sphinx_themes/pyramid/static/dist/css/theme.css'
+                        src: collect.select('ground.css'),
+                        dest: 'src/pyramid_sphinx_themes/ground/static/dist/css/ground.css'
                     }
                 ]
             }
         },
         watch: {
             less: {
-                files: ['src/pyramid_sphinx_themes/pyramid/static/less/*.less'],
+                files: ['src/pyramid_sphinx_themes/ground/static/less/*.less'],
                 tasks: ['less:default'],
                 options: { livereload: true }
             },
             concat: {
                 files: [
-                    'src/pyramid_sphinx_themes/pyramid/static/js/*.css',
-                    'src/pyramid_sphinx_themes/pyramid/static/js/*.js'
+                    'src/pyramid_sphinx_themes/ground/static/js/*.css',
+                    'src/pyramid_sphinx_themes/ground/static/js/*.js'
                     ],
                 tasks: ['concat:css', 'concat:js']
             }

@@ -14,7 +14,7 @@ def patch_sphinx():
         '_static/dist/js/html5shiv.js',
         '_static/dist/js/respond.min.js',
         '_static/dist/js/doctools.js',
-        '_static/dist/js/theme.js'
+        '_static/dist/js/ground.js'
         ]
     StandaloneHTMLBuilder.script_files = script_files
 

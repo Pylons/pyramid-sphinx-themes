@@ -4,8 +4,8 @@
         "components/html5shiv/dist/*.js",
         "components/respond/respond.min.js",
         "components/underscore/*.js",
-        "src/pyramid_sphinx_themes/pyramid/static/js/doctools.js",
-        "src/pyramid_sphinx_themes/pyramid/static/js/websupport.js"
+        "src/pyramid_sphinx_themes/ground/static/js/doctools.js",
+        "src/pyramid_sphinx_themes/ground/static/js/websupport.js"
     ],
     "copy.fonts": [
         "components/bootstrap/fonts/*"
@@ -25,20 +25,20 @@
         "components/bootstrap/js/affix.js"
     ],
     "bootstrap.css": [
-        "src/pyramid_sphinx_themes/pyramid/less/bootstrap.less"
+        "src/pyramid_sphinx_themes/ground/less/bootstrap.less"
     ],
-    "theme.css": [
-        "src/pyramid_sphinx_themes/pyramid/less/theme.less"
+    "ground.css": [
+        "src/pyramid_sphinx_themes/ground/less/ground.less"
     ],
-    "theme.js": [
-        "src/pyramid_sphinx_themes/pyramid/static/js/theme.js"
+    "ground.js": [
+        "src/pyramid_sphinx_themes/ground/static/js/ground.js"
     ],
     "sphinx.js": [
-        "src/pyramid_sphinx_themes/pyramid/static/js/doctools.js",
-        "src/pyramid_sphinx_themes/pyramid/static/js/websupport.js"
+        "src/pyramid_sphinx_themes/ground/static/js/doctools.js",
+        "src/pyramid_sphinx_themes/ground/static/js/websupport.js"
     ],
     "all.css": [
-        "src/pyramid_sphinx_themes/pyramid/static/dist/css/bootstrap.css",
-        "src/pyramid_sphinx_themes/pyramid/static/dist/css/theme.css"
+        "src/pyramid_sphinx_themes/ground/static/dist/css/bootstrap.css",
+        "src/pyramid_sphinx_themes/ground/static/dist/css/ground.css"
     ]
 }

@@ -5,7 +5,13 @@ import os
 from sphinx.builders.html import StandaloneHTMLBuilder
 
 
-def patch_sphinx():
+def get_html_themes_path():
+    """Return list of sphinx themes."""
+    here = os.path.abspath(os.path.dirname(__file__))
+    return [here]
+
+
+def setup(app):
     # Override files... Why we could not!!
     script_files = [
         '_static/dist/js/jquery.min.js',
@@ -17,9 +23,3 @@ def patch_sphinx():
         '_static/dist/js/ground.js'
         ]
     StandaloneHTMLBuilder.script_files = script_files
-
-
-def get_html_themes_path():
-    """Return list of sphinx themes."""
-    here = os.path.abspath(os.path.dirname(__file__))
-    return [here]

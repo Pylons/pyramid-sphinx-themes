@@ -90,7 +90,8 @@ Building docs
 
 Make edits in `docs/conf.py` as follows:
 
-**1. Add the `pyramid_sphinx_themes` Sphinx extension module name**
+1. Add the `pyramid_sphinx_themes` Sphinx extension module name
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 ::
 
     # Add any Sphinx extension module names here, as strings. They can be extensions
@@ -101,7 +102,8 @@ Make edits in `docs/conf.py` as follows:
         'pyramid_sphinx_themes'
         ]
 
-**2. Modify the section "Options for HTML output"**
+2. Modify the section "Options for HTML output"
++++++++++++++++++++++++++++++++++++++++++++++++
 ::
 
     # -- Options for HTML output ---------------------------------------------------
@@ -120,14 +122,16 @@ Make edits in `docs/conf.py` as follows:
     # Add any paths that contain custom themes here, relative to this directory.
     html_theme_path = get_html_themes_path()
 
-**3. Set (or wherever it gets set in the package)**
+3. Set (or wherever it gets set in the package)
++++++++++++++++++++++++++++++++++++++++++++++++
 ::
 
     html_use_smartypants = False
 
 Save `docs/conf.py`.
 
-**4. Run `sphinx-build`**
+4. Run `sphinx-build`
++++++++++++++++++++++
 
 While your current directory is `docs/`, run the command:
 ::

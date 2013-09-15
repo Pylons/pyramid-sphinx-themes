@@ -38,7 +38,7 @@ Assuming you have all the recommended tools listed above installed:
   $ pyvenv-3.3 --upgrade .
 
 
-3. Setup Buildout
+3. Setup buildout
 +++++++++++++++++
 ::
 
@@ -46,7 +46,7 @@ Assuming you have all the recommended tools listed above installed:
   $ bin/buildout
 
 
-Updating the Buildout
+Updating the buildout
 ---------------------
 
 To update the buildout:
@@ -59,10 +59,10 @@ To update the buildout:
 Working with assets
 -------------------
 
-If you're working on the frontend stack you should compile your less
-files to css, merge css and javascript, copy files and do other tasks.
-The default Grunt task takes care of less compilation and css+js file
-concatenation, use this command:
+If you're working on the frontend stack you should compile your LESS
+files to CSS, merge CSS and JavaScript, copy files and do other tasks.
+The default Grunt task takes care of LESS compilation and CSS+JS file
+concatenation using this command:
 ::
 
   $ bin/grunt
@@ -78,8 +78,8 @@ modify a file the default task is executed:
 
   $ bin/grunt watch
 
-If something happen and you need to reinitialize the assets, run this
-command:
+If something bad happens and you need to reinitialize the assets, run
+this command:
 ::
 
   $ bin/grunt init

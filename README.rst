@@ -85,10 +85,10 @@ this command:
   $ bin/grunt init
 
 
-Building docs
--------------
+Building your docs
+------------------
 
-Make edits in `docs/conf.py` as follows:
+Make edits in your project `docs/conf.py` as follows:
 
 1. Add the `pyramid_sphinx_themes` Sphinx extension module name
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

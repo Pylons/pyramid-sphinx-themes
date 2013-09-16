@@ -12,8 +12,7 @@
 {%- endblock %}
 {%- set reldelim1 = reldelim1 is not defined and ' &raquo;' or reldelim1 %}
 {%- set reldelim2 = reldelim2 is not defined and ' |' or reldelim2 %}
-{%- set render_sidebar = (not embedded) and (not theme_nosidebar|tobool) and
-                         (sidebars != []) %}
+{%- set render_sidebar = (not embedded) and (not theme_nosidebar|tobool) and (sidebars != []) %}
 {%- set url_root = pathto('', 1) %}
 {# XXX necessary? #}
 {%- if url_root == '#' %}{% set url_root = '' %}{% endif %}
@@ -23,12 +22,14 @@
   {%- set titlesuffix = "" %}
 {%- endif %}
 
+{%- set body_class = render_sidebar and "col-md-9" or "col-md-12"%}
+
 {%- macro relbar() %}
     <div class="related">
       <h3>{{ _('Navigation') }}</h3>
       <ul>
         {%- for rellink in rellinks %}
-        <li class="right" {% if loop.first %}style="margin-right: 10px"{% endif %}>
+        <li>
           <a href="{{ pathto(rellink[0]) }}" title="{{ rellink[1]|striptags|e }}"
              {{ accesskey(rellink[2]) }}>{{ rellink[3] }}</a>
           {%- if not loop.first %}{{ reldelim2 }}{% endif %}</li>
@@ -153,52 +154,66 @@
 {%- block extrahead %} {% endblock %}
   </head>
   <body>
-{%- block header %}{% endblock %}
 
-{%- block relbar1 %}{{ relbar() }}{% endblock %}
+    <div class="container">
 
-{%- block content %}
-  {%- block sidebar1 %} {# possible location for sidebar #} {% endblock %}
-
-    <div class="document">
-  {%- block document %}
-      <div class="documentwrapper">
-      {%- if render_sidebar %}
-        <div class="bodywrapper">
-      {%- endif %}
-          <div class="body">
-            {% block body %} {% endblock %}
-          </div>
-      {%- if render_sidebar %}
+<!-- {%- block header %}{% endblock %} -->
+      <div class="row">
+        <div class="col-md-12">
+          {%- block relbar1 %}{{ relbar() }}{% endblock %}
         </div>
-      {%- endif %}
       </div>
-  {%- endblock %}
 
-  {%- block sidebar2 %}{{ sidebar() }}{% endblock %}
-      <div class="clearer"></div>
-    </div>
-{%- endblock %}
+      {%- block content %}
+      <div class="row">
+        {%- if (not theme_nosidebar1|tobool) and (theme_nosidebar2|tobool) %}
+        <div class="col-md-3">
+          {%- block sidebar1 %} {{ sidebar() }} {% endblock %}
+        </div>
+        {%- endif %}
 
-{%- block relbar2 %}{{ relbar() }}{% endblock %}
+      <div class="{{ body_class }}">
+        {%- block document %}
+        {% block body %} {% endblock %}
+        {%- endblock %}
+      </div>
 
-{%- block footer %}
-    <div class="footer">
-    {%- if show_copyright %}
-      {%- if hasdoc('copyright') %}
-        {% trans path=pathto('copyright'), copyright=copyright|e %}&copy; <a href="{{ path }}">Copyright</a> {{ copyright }}.{% endtrans %}
-      {%- else %}
-        {% trans copyright=copyright|e %}&copy; Copyright {{ copyright }}.{% endtrans %}
+      {%- if (not theme_nosidebar2|tobool) and (theme_nosidebar1|tobool)%}
+      <div class="col-md-3">
+        {%- block sidebar2 %} {% endblock %}
+      </div>
       {%- endif %}
-    {%- endif %}
-    {%- if last_updated %}
-      {% trans last_updated=last_updated|e %}Last updated on {{ last_updated }}.{% endtrans %}
-    {%- endif %}
-    {%- if show_sphinx %}
-      {% trans sphinx_version=sphinx_version|e %}Created using <a href="http://sphinx-doc.org/">Sphinx</a> {{ sphinx_version }}.{% endtrans %}
-    {%- endif %}
     </div>
-{%- endblock %}
+    {%- endblock %}
+
+    <div class="row">
+      <div class="col-md-12">
+        {%- block relbar2 %}{{ relbar() }}{% endblock %}
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        {%- block footer %}
+        <div class="footer">
+          {%- if show_copyright %}
+          {%- if hasdoc('copyright') %}
+          {% trans path=pathto('copyright'), copyright=copyright|e %}&copy; <a href="{{ path }}">Copyright</a> {{ copyright }}.{% endtrans %}
+          {%- else %}
+          {% trans copyright=copyright|e %}&copy; Copyright {{ copyright }}.{% endtrans %}
+          {%- endif %}
+          {%- endif %}
+          {%- if last_updated %}
+          {% trans last_updated=last_updated|e %}Last updated on {{ last_updated }}.{% endtrans %}
+          {%- endif %}
+          {%- if show_sphinx %}
+          {% trans sphinx_version=sphinx_version|e %}Created using <a href="http://sphinx-doc.org/">Sphinx</a> {{ sphinx_version }}.{% endtrans %}
+          {%- endif %}
+        </div>
+        {%- endblock %}
+      </div>
+    </div>
+  </div> <!-- container -->
 
 {%- if not embedded %}
     {{ script() }}

@@ -2,18 +2,28 @@
   "name": "pyramid-sphinx-themes",
   "version": "0.1.0",
   "description": "Pyramid Sphinx Themes",
-  "devDependencies": {
+  "engines": [
+    "node"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Pylons/pyramid-sphinx-themes"
+  },
+  "dependencies": {
     "bower": "*",
-    "grunt-cli": "*",
-    "grunt": "*",
-    "grunt-contrib-concat": "*",
-    "grunt-contrib-copy": "*",
-    "grunt-contrib-cssmin": "*",
-    "grunt-contrib-jshint": "*",
-    "grunt-contrib-less": "*",
-    "grunt-contrib-uglify": "*",
-    "grunt-contrib-watch": "*",
-    "grunt-collection-helper": "*"
+    "gulp": "*"
+  },
+  "devDependencies": {
+    "gulp-util": "*",
+    "gulp-concat": "*",
+    "gulp-sourcemaps": "*",
+    "gulp-cssmin": "*",
+    "gulp-jshint": "*",
+    "gulp-less": "*",
+    "gulp-load-plugins": "*",
+    "gulp-uglify": "*",
+    "gulp-watch": "*",
+    "gulp-bower-files": "*"
     },
   "author": "Blaise Laflamme, the Pylons Project Community",
   "license": "BSD-Derived"

@@ -13,6 +13,11 @@ At the bare minimum you'll need the following for doing development:
 - Virtualenv
 - NodeJS
 
+From npm, be sure you install bower and grunt system-wide, like your virtualenv installation.
+::
+
+  $ npm install -g bower
+  $ npm install -g gulp
 
 Installing
 ----------

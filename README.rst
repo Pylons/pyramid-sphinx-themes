@@ -67,19 +67,19 @@ files to CSS, merge CSS and JavaScript, copy files and do other tasks.
 The default Gulp task takes care of LESS compilation:
 ::
 
-  $ bin/gulp
+  $ gulp
 
 You can use the watcher task while you're working so each time you
 modify a file the less and js files are compiled to dist:
 ::
 
-  $ bin/gulp watch
+  $ gulp watch
 
 If something bad happens and you need to reinitialize the assets, run
 this command:
 ::
 
-  $ bin/gulp init
+  $ gulp init
 
 
 Building your docs

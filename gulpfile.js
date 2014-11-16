@@ -5,9 +5,32 @@ var plugins = require('gulp-load-plugins')();
 var environment = plugins.util.env.environment || 'development';
 
 
-gulp.task('copy', function() {
-    return gulp.src()
-    .pipe()
+gulp.task('copy-css', function() {
+  return gulp.src([
+    'components/bootstrap/dist/css/bootstrap.min.css',
+    'components/bootstrap/dist/css/bootstrap.css.map',
+    'components/font-awesome/css/font-awesome.min.css',
+    ])
+    .pipe(gulp.dest('src/pyramid_sphinx_themes/ground/static/dist/css'))
+});
+
+gulp.task('copy-fonts', function() {
+  return gulp.src([
+    'components/bootstrap/dist/fonts/*',
+    'components/font-awesome/fonts/*',
+    ])
+    .pipe(gulp.dest('src/pyramid_sphinx_themes/ground/static/dist/fonts'))
+});
+
+gulp.task('copy-js', function() {
+  return gulp.src([
+    'components/bootstrap/dist/js/bootstrap.min.js',
+    'components/html5shiv/dist/*.min.js',
+    'components/jquery/dist/jquery.min.*',
+    'components/respond/dest/*.min.js',
+    'components/underscore/*-min*'
+    ])
+    .pipe(gulp.dest('src/pyramid_sphinx_themes/ground/static/dist/js'))
 });
 
 gulp.task('styles', function() {
@@ -35,3 +58,4 @@ gulp.task('watch', function() {
 });
 
 gulp.task('default', ['build', 'watch']);
+gulp.task('init', ['copy-css', 'copy-fonts', 'copy-js'])

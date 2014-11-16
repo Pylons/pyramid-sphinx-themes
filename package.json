@@ -22,8 +22,7 @@
     "gulp-less": "*",
     "gulp-load-plugins": "*",
     "gulp-uglify": "*",
-    "gulp-watch": "*",
-    "gulp-bower-files": "*"
+    "gulp-watch": "*"
     },
   "author": "Blaise Laflamme, the Pylons Project Community",
   "license": "BSD-Derived"

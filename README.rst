@@ -63,28 +63,22 @@ Working with assets
 
 If you're working on the frontend stack you should compile your LESS
 files to CSS, merge CSS and JavaScript, copy files and do other tasks.
-The default Grunt task takes care of LESS compilation and CSS+JS file
-concatenation using this command:
+The default Gulp task takes care of LESS compilation:
 ::
 
-  $ bin/grunt
+  $ bin/gulp
 
-For dist files:
+You can use the watcher task while you're working so each time you
+modify a file the less files are compiled to css:
 ::
 
-  $ bin/grunt dist
-
-Or you can use the watcher while you're working so each time you
-modify a file the default task is executed:
-::
-
-  $ bin/grunt watch
+  $ bin/gulp watch
 
 If something bad happens and you need to reinitialize the assets, run
 this command:
 ::
 
-  $ bin/grunt init
+  $ bin/gulp init
 
 
 Building your docs

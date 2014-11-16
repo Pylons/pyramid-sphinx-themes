@@ -69,7 +69,7 @@ The default Gulp task takes care of LESS compilation:
   $ bin/gulp
 
 You can use the watcher task while you're working so each time you
-modify a file the less files are compiled to css:
+modify a file the less and js files are compiled to dist:
 ::
 
   $ bin/gulp watch

@@ -38,22 +38,19 @@ Assuming you have all the recommended tools listed above installed:
   $ pyvenv-3.3 --upgrade .
 
 
-3. Setup buildout
-+++++++++++++++++
+3. Install requirements
++++++++++++++++++++++++
 ::
 
-  $ bin/python bootstrap.py
-  $ bin/buildout
+  $ bin/pip install -r requirement.txt
 
 
-Updating the buildout
----------------------
-
-To update the buildout:
+3. Install frontend tools
++++++++++++++++++++++++++
 ::
 
-   $ git pull
-   $ bin/buildout
+   $ npm install
+   $ bower install
 
 
 Working with assets
@@ -107,18 +104,18 @@ Make edits in your project `docs/conf.py` as follows:
 ::
 
     # -- Options for HTML output ---------------------------------------------------
-    
+
     from pyramid_sphinx_themes import get_html_themes_path
-    
+
     # The theme to use for HTML and HTML Help pages.  See the documentation for
     # a list of builtin themes.
     html_theme = 'ground'
-    
+
     # Theme options are theme-specific and customize the look and feel of a theme
     # further.  For a list of options available for each theme, see the
     # documentation.
     #html_theme_options = {}
-    
+
     # Add any paths that contain custom themes here, relative to this directory.
     html_theme_path = get_html_themes_path()
 

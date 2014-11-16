@@ -11,15 +11,10 @@
 /.Python
 /PYSMELLTAGS*
 
-# buildout
-/.installed.cfg
-/.mr.developer.cfg
+# env
 /bin
-/develop-eggs
-/eggs
 /include
 /lib
-/parts
 
 # local
 /docs/_build

@@ -41,7 +41,7 @@ Assuming you have all the recommended tools listed above installed:
   # for Python 2
   $ virtualenv .
   # for Python 3
-  $ pyvenv-3.3 --upgrade .
+  $ pyvenv --upgrade .
 
 
 3. Install requirements

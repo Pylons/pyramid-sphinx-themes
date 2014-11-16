@@ -57,5 +57,5 @@ gulp.task('watch', function() {
   gulp.watch('src/pyramid_sphinx_themes/ground/static/js/**/*.js', ['scripts']);
 });
 
-gulp.task('default', ['build', 'watch']);
+gulp.task('default', ['build']);
 gulp.task('init', ['copy-css', 'copy-fonts', 'copy-js'])

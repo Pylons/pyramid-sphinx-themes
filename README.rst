@@ -7,7 +7,7 @@ Pyramid Sphinx themes for related projects
 Environment
 -----------
 
-At the bare minimum you'll need the following for doing development:
+At the bare minimum you'll need the following for hacking on this project:
 
 - `Python <https://www.python.org/downloads/>`_
 - `Virtualenv <http://virtualenv.readthedocs.org/en/latest/virtualenv.html#installation>`_
@@ -49,6 +49,11 @@ Assuming you have all the recommended tools listed above installed:
 ::
 
   $ bin/pip install -r requirements.txt
+
+You also need to install the project in editable mode:
+::
+
+  $ bin/pip install -e .
 
 
 4. Install frontend tools

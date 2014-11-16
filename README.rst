@@ -9,11 +9,12 @@ Environment
 
 At the bare minimum you'll need the following for doing development:
 
-- Python
-- Virtualenv
-- NodeJS
+- `Python <https://www.python.org/downloads/>`_
+- `Virtualenv <http://virtualenv.readthedocs.org/en/latest/virtualenv.html#installation>`_
+- `NodeJS <http://nodejs.org/download/>`_
 
-From npm, be sure you install bower and grunt system-wide, like your virtualenv installation.
+From npm, be sure you install bower and grunt system-wide, like your
+virtualenv installation.
 ::
 
   $ npm install -g bower
@@ -47,10 +48,10 @@ Assuming you have all the recommended tools listed above installed:
 +++++++++++++++++++++++
 ::
 
-  $ bin/pip install -r requirement.txt
+  $ bin/pip install -r requirements.txt
 
 
-3. Install frontend tools
+4. Install frontend tools
 +++++++++++++++++++++++++
 ::
 

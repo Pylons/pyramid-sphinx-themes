@@ -24,61 +24,57 @@ Assuming you have all the recommended tools listed above installed:
 ++++++++++++++++++++
 ::
 
-  $ git clone https://github.com/Pylons/pyramid-sphinx-themes.git
-  $ cd pyramid-sphinx-themes
+    $ git clone https://github.com/Pylons/pyramid-sphinx-themes.git
+    $ cd pyramid-sphinx-themes
 
 
 2. Create and initialize a virtualenv
 +++++++++++++++++++++++++++++++++++++
 ::
 
-  # for Python 2
-  $ virtualenv .
-  # for Python 3
-  $ pyvenv --upgrade .
+    # for Python 2
+    $ virtualenv .
+    # for Python 3
+    $ pyvenv --upgrade .
 
 
 3. Install requirements
 +++++++++++++++++++++++
+
+Install the project in editable mode:
+
 ::
 
-  $ bin/pip install -r requirements.txt
-
-You also need to install the project in editable mode:
-::
-
-  $ bin/pip install -e .
+    $ bin/pip install -e .
 
 
 4. Install frontend tools
 +++++++++++++++++++++++++
 ::
 
-   $ npm install
-   $ bower install
+    $ npm install -D
 
 
-Working with assets
--------------------
+Working with frontend tools
+---------------------------
 
-If you're working on the frontend stack you should compile your LESS
-files to CSS, merge CSS and JavaScript, copy files and do other tasks.
-The default Gulp task takes care of LESS compilation:
+If you are in development mode, and need hot reload and compiling of assets
+run:
+
 ::
+    $ npm run dev
 
-  $ gulp
+View the local site in a browser at http://localhost:8080/
 
-You can use the watcher task while you're working so each time you
-modify a file the less and js files are compiled to dist:
+If you just want to output a build run:
+
 ::
+    $ npm run build
 
-  $ gulp watch
+If you want a new dist optimized for production run:
 
-If something bad happens and you need to reinitialize the assets, run
-this command:
 ::
-
-  $ gulp init
+    $ npm run dist
 
 
 Building your docs
@@ -90,10 +86,12 @@ Make edits in your project `docs/conf.py` as follows:
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 ::
 
-    # Add any Sphinx extension module names here, as strings. They can be extensions
-    # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
+    # Add any Sphinx extension module names here, as strings. They can be
+    # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
+    # ones.
     extensions = [
         'sphinx.ext.autodoc',
+        'sphinx.ext.intersphinx',
         'sphinx.ext.viewcode',
         'pyramid_sphinx_themes'
         ]
@@ -108,7 +106,7 @@ Make edits in your project `docs/conf.py` as follows:
 
     # The theme to use for HTML and HTML Help pages.  See the documentation for
     # a list of builtin themes.
-    html_theme = 'ground'
+    html_theme = 'pyramid_sphinx_themes'
 
     # Theme options are theme-specific and customize the look and feel of a theme
     # further.  For a list of options available for each theme, see the
@@ -118,6 +116,7 @@ Make edits in your project `docs/conf.py` as follows:
     # Add any paths that contain custom themes here, relative to this directory.
     html_theme_path = get_html_themes_path()
 
+
 3. Set (or wherever it gets set in the package)
 +++++++++++++++++++++++++++++++++++++++++++++++
 ::
@@ -125,6 +124,7 @@ Make edits in your project `docs/conf.py` as follows:
     html_use_smartypants = False
 
 Save `docs/conf.py`.
+
 
 4. Run `sphinx-build`
 +++++++++++++++++++++
@@ -134,8 +134,3 @@ While your current directory is `docs/`, run the command:
 
     make clean html SPHINXBUILD=../bin/sphinx-build
 
-
-References and Guides
----------------------
-- `Getting started with gulp <http://markgoodyear.com/2014/01/getting-started-with-gulp/>`_
-- `Building with gulp <http://www.smashingmagazine.com/2014/06/11/building-with-gulp/>`_

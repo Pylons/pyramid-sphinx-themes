@@ -3,7 +3,7 @@
   "description": "Pyramid Sphinx Themes",
   "version": "0.1.0",
   "author": "Blaise Laflamme, the Pylons Project Community",
-  "license": "BSD-Derived"
+  "license": "BSD-Derived",
   "engines": [
     "node"
   ],

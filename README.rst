@@ -1,7 +1,7 @@
 pyramid-sphinx-themes
 =====================
 
-Pyramid Sphinx themes for related projects
+Pyramid Sphinx themes for related projects.
 
 
 Requirements
@@ -11,16 +11,8 @@ You will need the following for hacking on this project:
 
 - `Python <https://www.python.org/downloads/>`_
 - `Virtualenv <http://virtualenv.readthedocs.org/en/latest/virtualenv.html#installation>`_
-- `NodeJS <http://nodejs.org/download/>`_
-- `bower <http://bower.io/>`_
-- `gulp <http://gulpjs.com/>`_
+- `NodeJS with npm <http://nodejs.org/download/>`_
 
-Using npm, install bower and gulp system-wide, if you have not done so
-already.
-::
-
-  $ npm install -g bower
-  $ npm install -g gulp
 
 Installing
 ----------
@@ -32,7 +24,7 @@ Assuming you have all the recommended tools listed above installed:
 ++++++++++++++++++++
 ::
 
-  $ git clone git@github.com:Pylons/pyramid-sphinx-themes.git
+  $ git clone https://github.com/Pylons/pyramid-sphinx-themes.git
   $ cd pyramid-sphinx-themes
 
 

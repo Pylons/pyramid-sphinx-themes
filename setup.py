@@ -27,8 +27,9 @@ except IOError:
     README = CHANGES = ''
 
 requires = [
-    'Sphinx',
-    'docutils'
+    'Sphinx>=1.3.5',
+    'docutils',
+    'repoze.sphinx.autointerface',
     ]
 
 

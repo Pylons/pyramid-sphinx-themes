@@ -22,7 +22,8 @@ Assuming you have all the recommended tools listed above installed:
 
 1. Clone the project
 ++++++++++++++++++++
-::
+
+.. code-block:: bash
 
     $ git clone https://github.com/Pylons/pyramid-sphinx-themes.git
     $ cd pyramid-sphinx-themes
@@ -30,7 +31,8 @@ Assuming you have all the recommended tools listed above installed:
 
 2. Create and initialize a virtualenv
 +++++++++++++++++++++++++++++++++++++
-::
+
+.. code-block:: bash
 
     # for Python 2
     $ virtualenv .
@@ -43,14 +45,15 @@ Assuming you have all the recommended tools listed above installed:
 
 Install the project in editable mode:
 
-::
+.. code-block:: bash
 
     $ bin/pip install -e .
 
 
 4. Install frontend tools
 +++++++++++++++++++++++++
-::
+
+.. code-block:: bash
 
     $ npm install -D
 
@@ -61,19 +64,22 @@ Working with frontend tools
 If you are in development mode, and need hot reload and compiling of assets
 run:
 
-::
+.. code-block:: bash
+
     $ npm run dev
 
 View the local site in a browser at http://localhost:8080/
 
 If you just want to output a build run:
 
-::
+.. code-block:: bash
+
     $ npm run build
 
 If you want a new dist optimized for production run:
 
-::
+.. code-block:: bash
+
     $ npm run dist
 
 
@@ -84,7 +90,8 @@ Make edits in your project `docs/conf.py` as follows:
 
 1. Add the `pyramid_sphinx_themes` Sphinx extension module name
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-::
+
+.. code-block:: python
 
     # Add any Sphinx extension module names here, as strings. They can be
     # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
@@ -98,7 +105,8 @@ Make edits in your project `docs/conf.py` as follows:
 
 2. Modify the section "Options for HTML output"
 +++++++++++++++++++++++++++++++++++++++++++++++
-::
+
+.. code-block:: python
 
     # -- Options for HTML output ---------------------------------------------------
 
@@ -119,7 +127,8 @@ Make edits in your project `docs/conf.py` as follows:
 
 3. Set (or wherever it gets set in the package)
 +++++++++++++++++++++++++++++++++++++++++++++++
-::
+
+.. code-block:: Python
 
     html_use_smartypants = False
 
@@ -130,7 +139,8 @@ Save `docs/conf.py`.
 +++++++++++++++++++++
 
 While your current directory is `docs/`, run the command:
-::
 
-    make clean html SPHINXBUILD=../bin/sphinx-build
+.. code-block:: bash
+
+    $ make clean html SPHINXBUILD=../bin/sphinx-build
 

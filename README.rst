@@ -86,7 +86,7 @@ If you want a new dist optimized for production run:
 Building your docs
 ------------------
 
-Make edits in your project `docs/conf.py` as follows:
+Make edits in your project ``docs/conf.py`` as follows:
 
 1. Add the `pyramid_sphinx_themes` Sphinx extension module name
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -132,13 +132,13 @@ Make edits in your project `docs/conf.py` as follows:
 
     html_use_smartypants = False
 
-Save `docs/conf.py`.
+Save ``docs/conf.py``.
 
 
 4. Run `sphinx-build`
 +++++++++++++++++++++
 
-While your current directory is `docs/`, run the command:
+While your current directory is ``docs/``, run the command:
 
 .. code-block:: bash
 

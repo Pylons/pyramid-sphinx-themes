@@ -27,8 +27,9 @@ except IOError:
     README = CHANGES = ''
 
 requires = [
-    'Sphinx',
-    'docutils'
+    'Sphinx>=1.3.5',
+    'docutils',
+    'repoze.sphinx.autointerface',
     ]
 
 
@@ -50,8 +51,7 @@ setup(name='pyramid-sphinx-themes',
       author_email="pylons-discuss@googlegroups.com",
       url="http://pylonsproject.org",
       license="BSD-derived (http://www.repoze.org/LICENSE.txt)",
-      packages=find_packages('src'),
-      package_dir={'': 'src'},
+      packages=find_packages(),
       include_package_data=True,
       zip_safe=False,
       install_requires=requires,

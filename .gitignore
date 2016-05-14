@@ -15,13 +15,17 @@
 /bin
 /include
 /lib
+/pyvenv.cfg
 
 # local
 /docs/_build
 /components
 /node_modules/
 /npm-debug.log
+/build/
 
 # Mac
 .DS_Store
-pyvenv.cfg
+
+# IDE
+.idea

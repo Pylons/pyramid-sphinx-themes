@@ -16,6 +16,7 @@
 /include
 /lib
 /pyvenv.cfg
+/pip-selfcheck.json
 
 # local
 /docs/_build

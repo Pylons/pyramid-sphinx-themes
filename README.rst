@@ -3,6 +3,12 @@ pyramid-sphinx-themes
 
 Pyramid Sphinx themes for Pyramid and projects that use Pyramid.
 
+This project consists of parts that are not yet integrated. The layout and
+design are developed using webpack. Somehow, yet to be determined, the design
+is magically ported into a Sphinx theme. Finally to test that the theme renders
+correctly, we run our sample documentation through Sphinx.
+
+.. TODO:: Port design to Sphinx theme.
 
 Requirements
 ------------

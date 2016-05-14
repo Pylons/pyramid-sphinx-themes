@@ -4,17 +4,19 @@ pyramid-sphinx-themes
 Pyramid Sphinx themes for related projects
 
 
-Environment
------------
+Requirements
+------------
 
-At the bare minimum you'll need the following for hacking on this project:
+You will need the following for hacking on this project:
 
 - `Python <https://www.python.org/downloads/>`_
 - `Virtualenv <http://virtualenv.readthedocs.org/en/latest/virtualenv.html#installation>`_
 - `NodeJS <http://nodejs.org/download/>`_
+- `bower <http://bower.io/>`_
+- `gulp <http://gulpjs.com/>`_
 
-From npm, be sure you install bower and grunt system-wide, like your
-virtualenv installation.
+Using npm, install bower and gulp system-wide, if you have not done so
+already.
 ::
 
   $ npm install -g bower
@@ -139,3 +141,9 @@ While your current directory is `docs/`, run the command:
 ::
 
     make clean html SPHINXBUILD=../bin/sphinx-build
+
+
+References and Guides
+---------------------
+- `Getting started with gulp <http://markgoodyear.com/2014/01/getting-started-with-gulp/>`_
+- `Building with gulp <http://www.smashingmagazine.com/2014/06/11/building-with-gulp/>`_

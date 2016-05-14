@@ -1,7 +1,7 @@
 pyramid-sphinx-themes
 =====================
 
-Pyramid Sphinx themes for related projects.
+Pyramid Sphinx themes for Pyramid and projects that use Pyramid.
 
 
 Requirements
@@ -10,7 +10,8 @@ Requirements
 You will need the following for hacking on this project:
 
 - `Python <https://www.python.org/downloads/>`_
-- `Virtualenv <http://virtualenv.readthedocs.org/en/latest/virtualenv.html#installation>`_
+- `Recommended Python packaging tools
+  <https://packaging.python.org/en/latest/current/>`_
 - `NodeJS with npm <http://nodejs.org/download/>`_
 
 
@@ -29,16 +30,14 @@ Assuming you have all the recommended tools listed above installed:
     $ cd pyramid-sphinx-themes
 
 
-2. Create and initialize a virtualenv
-+++++++++++++++++++++++++++++++++++++
+2. Create a virtual environment
++++++++++++++++++++++++++++++++
 
 .. code-block:: bash
 
-    # for Python 2
-    $ virtualenv .
-    # for Python 3
-    $ pyvenv --upgrade .
-
+    $ export VENV=${PWD}
+    $ python3 -m venv $VENV
+    $ $VENV/bin/pip install --upgrade pip setuptools
 
 3. Install requirements
 +++++++++++++++++++++++
@@ -47,22 +46,19 @@ Install the project in editable mode:
 
 .. code-block:: bash
 
-    $ bin/pip install -e .
-
+    $ $VENV/bin/pip install -e .
 
 4. Install frontend tools
 +++++++++++++++++++++++++
 
 .. code-block:: bash
 
-    $ npm install -D
-
+    $ npm i
 
 Working with frontend tools
 ---------------------------
 
-If you are in development mode, and need hot reload and compiling of assets
-run:
+For development mode, with hot reload and compilation of assets:
 
 .. code-block:: bash
 
@@ -70,13 +66,13 @@ run:
 
 View the local site in a browser at http://localhost:8080/
 
-If you just want to output a build run:
+For a quick local build, not optimized:
 
 .. code-block:: bash
 
     $ npm run build
 
-If you want a new dist optimized for production run:
+Create a dist optimized for production:
 
 .. code-block:: bash
 

@@ -2,7 +2,7 @@ var path = require('path');
 var webpack = require('webpack');
 var WebpackNotifierPlugin = require('webpack-notifier');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
-var SwigWebpackPlugin = require('swig-webpack-plugin');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 var node_modules_dir = path.resolve(__dirname, 'node_modules');
 var templates = require('./webpack.tmpl.config').templates;
 
@@ -52,8 +52,17 @@ var config = {
       test: /\.txt$/,
       loader: 'raw'
     }, {
+      test: /\.ejs$/,
+      loader: 'ejs-compiled'
+    },{
       test: /\.(woff|woff2|ttf|eot|svg)(\?.*)?$/,
       loader: 'file?name=fonts/[name].[ext]'
+    }, {
+      test: require.resolve('jquery'),
+      loader: 'expose?$!expose?jQuery'
+    }, {
+      test: /isotope\-|fizzy\-ui\-utils|desandro\-|masonry|outlayer|get\-size|doc\-ready|eventie|eventemitter/,
+      loader: 'imports?define=>false&this=>window'
     }]
   },
   plugins: [
@@ -81,8 +90,8 @@ var config = {
 if (templates) {
   templates.forEach(function(template) {
     template.mode = 'develop';
-    config.plugins.push(new SwigWebpackPlugin(template));
+    config.plugins.push(new HtmlWebpackPlugin(template));
   });
-}
+};
 
 module.exports = config;

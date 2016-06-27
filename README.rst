@@ -29,7 +29,7 @@ Assuming you have all the recommended tools listed above installed:
 
 
 1. Clone the project
-++++++++++++++++++++
+^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: bash
 
@@ -38,7 +38,7 @@ Assuming you have all the recommended tools listed above installed:
 
 
 2. Create a virtual environment
-+++++++++++++++++++++++++++++++
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: bash
 
@@ -48,7 +48,7 @@ Assuming you have all the recommended tools listed above installed:
 
 
 3. Install requirements
-+++++++++++++++++++++++
+^^^^^^^^^^^^^^^^^^^^^^^
 
 Install the project in editable mode:
 
@@ -58,7 +58,7 @@ Install the project in editable mode:
 
 
 4. Install frontend tools
-+++++++++++++++++++++++++
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: bash
 
@@ -95,7 +95,7 @@ Building your docs
 Make edits in your project ``docs/conf.py`` as follows:
 
 1. Add the `pyramid_sphinx_themes` Sphinx extension module name
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: python
 
@@ -132,7 +132,7 @@ Make edits in your project ``docs/conf.py`` as follows:
 
 
 3. Set (or wherever it gets set in the package)
-+++++++++++++++++++++++++++++++++++++++++++++++
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: Python
 
@@ -142,7 +142,7 @@ Save ``docs/conf.py``.
 
 
 4. Run `sphinx-build`
-+++++++++++++++++++++
+^^^^^^^^^^^^^^^^^^^^^
 
 While your current directory is ``docs/``, run the command:
 
@@ -190,7 +190,7 @@ about this project.
 
 
 Front-end toolset configuration
-+++++++++++++++++++++++++++++++
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The front-end toolset is configured using the files at the root level.
 
@@ -209,7 +209,7 @@ load times for users at the expense of configuration simplicity.
 
 
 Static asssets
-++++++++++++++
+^^^^^^^^^^^^^^
 
 Static assets come from various sources. When these sources are updated, we
 update our copies of these source files, either through ``npm`` or manually
@@ -217,7 +217,7 @@ copying or diffing them.
 
 
 Twitter Bootstrap
-`````````````````
+'''''''''''''''''
 
 We use the official `Sass port of Twitter Bootstrap 3
 <https://github.com/twbs/bootstrap-sass>`_. After installing via `npm`, source

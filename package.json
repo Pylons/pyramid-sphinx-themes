@@ -1,15 +1,15 @@
 {
-  "name": "trypyramid.com",
-  "description": "trypyramid.com",
-  "version": "0.3.12-dev",
-  "author": "Pylons Project",
+  "name": "pyramid-sphinx-themes",
+  "description": "pyramid-sphinx-themes based on trypyramid.com",
+  "version": "0.1.0-dev",
+  "author": "Steve Piercy, Blaise LaFlamme, Pylons Project contributors",
   "license": "MIT",
   "engines": [
     "node"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/Pylons/trypyramid.com.git"
+    "url": "https://github.com/Pylons/pyramid-sphinx-themes.git"
   },
   "scripts": {
     "build": "rm -Rf build/*; webpack -d --colors --progress",

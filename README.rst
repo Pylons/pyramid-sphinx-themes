@@ -1,7 +1,8 @@
 pyramid-sphinx-themes
 =====================
 
-Pyramid Sphinx themes for Pyramid and projects that use Pyramid.
+Sphinx theme for styling documentation of Pyramid and projects that use
+Pyramid.
 
 This project consists of parts that are not yet integrated. The layout and
 design are developed using webpack. Somehow, yet to be determined, the design
@@ -92,7 +93,8 @@ Create a dist optimized for production:
 Building your docs
 ------------------
 
-Make edits in your project ``docs/conf.py`` as follows:
+Make edits in your project ``docs/conf.py`` as follows.
+
 
 1. Add the `pyramid_sphinx_themes` Sphinx extension module name
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -109,8 +111,9 @@ Make edits in your project ``docs/conf.py`` as follows:
         'pyramid_sphinx_themes'
         ]
 
+
 2. Modify the section "Options for HTML output"
-+++++++++++++++++++++++++++++++++++++++++++++++
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: python
 

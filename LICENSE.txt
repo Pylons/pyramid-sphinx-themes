@@ -1,1 +1,1 @@
-See CONTRIBUTORS.txt for licensing terms and exceptions.
+See CONTRIBUTORS.md for licensing terms and exceptions.
